@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Problems</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Coding Problems of the Day</h1>
+      </header>
+      <main>
+        <button id="openAllButton" class="open-all-button">Open All</button>
+        <div id="problems" class="problems-list"></div>
+      </main>
+      <footer>
+        <p>Happy Coding!</p>
+        <div class="reminder-container">
+            <h3>Set Daily Reminder</h3>
+            <div class="reminder-input-group">
+              <label for="reminder-time">Reminder Time:</label>
+              <input type="time" id="reminder-time" />
+            </div>
+            <button id="set-reminder-btn">Set Reminder</button>
+            <p id="reminder-status"></p>
+          </div>
+          
+      </footer>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
