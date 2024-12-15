@@ -69,10 +69,10 @@ This Chrome Extension helps you access "Problem of the Day" from platforms like 
 ## 📷 Screenshots  
 
 ### Popup View  
-![Popup View](./images/popup-interface.png)  
+![Popup View](icons/popup.png)  
 
 ### Notification View  
-![Reminder Notification](./images/reminder-notification.png)  
+![Reminder Notification](icons/reminder.png)  
 
 ---
 
