@@ -63,7 +63,7 @@ header {
 }
 
 .problems-list a:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 
   span {
     color: #0056b3;
@@ -132,7 +132,6 @@ header {
 .link-icon {
   width: 24px;
   height: 24px;
-  margin-right: 10px;
 }
 
 .link {
@@ -143,6 +142,7 @@ header {
   font-size: 14px;
   font-weight: bold;
   transition: all 0.3s ease;
+  margin-right: 10px;
 }
 
 .reminder-container {
