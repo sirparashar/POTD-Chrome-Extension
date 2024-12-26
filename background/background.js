@@ -34,7 +34,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 // Handle alarms
 chrome.alarms.onAlarm.addListener((alarm) => {
   console.log(`Alarm triggered: ${alarm.name}`);
-  if (alarm.name === "dailyReminder") {
+  if (alarm.name === "dailyReminder" || alarm.name === "snoozeAlarm") {
     chrome.notifications.create(
       {
         type: "basic",
@@ -53,6 +53,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         if (chrome.scripting) {
+          console.log(tabs,"Using chrome.scripting.executeScript");
           // For Chrome 88 and above, use chrome.scripting.executeScript
           chrome.scripting.executeScript({
             target: { tabId: tabs[0].id },
@@ -135,14 +136,15 @@ function showCustomModal() {
     if (message.type === "snoozeAlarm") {
       const { snoozeMinutes } = message;
   
-      // Clear existing alarm
-      chrome.alarms.clear("dailyReminder");
-  
       // Set a new alarm after snooze duration
-      chrome.alarms.create("dailyReminder", {
+      chrome.alarms.create("snoozeAlarm", {
         delayInMinutes: snoozeMinutes,
       });
-  
+      
+      // chrome.alarms.getAll((alarms) => {
+      //   console.log("Current alarms:", alarms);
+      // });
+
       console.log(`Snoozed for ${snoozeMinutes} minutes`);
       sendResponse({ success: true });
     }

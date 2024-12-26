@@ -3,7 +3,17 @@
   "name": "Coding Problems of the Day",
   "version": "1.0",
   "description": "Displays the problem of the day from various coding platforms.",
-  "permissions": ["alarms", "notifications", "tabs", "activeTab","storage", "scripting"],
+  "permissions": ["alarms", "notifications", "tabs", "activeTab", "storage", "scripting"],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "music/*.mp3",
+        "popup/focus/*.css",
+        "popup/focus/*.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "background": {
     "service_worker": "background/background.js"
   },

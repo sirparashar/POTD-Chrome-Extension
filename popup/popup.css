@@ -16,9 +16,93 @@ body {
   border-radius: 8px;
   background: #ffffff;
 }
-
+/* Dark Theme Styling */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
 .container.dark {
-  filter: invert(1);
+  background: #1e1e1e;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  color: #ccc;
+}
+
+header.dark .header-content {
+  border-bottom-color: #589eee;
+}
+
+header.dark h1 {
+  color: #589eee;
+}
+
+.problems-list.dark a {
+  color: #e0e0e0;
+}
+
+.problems-list.dark a:hover span {
+  color: #589eee;
+}
+
+.open-all-button.dark {
+  background-color: #589eee;
+  color: #121212;
+}
+
+.open-all-button.dark:hover {
+  background-color: #357ab8;
+}
+
+.open-all-button.dark:active {
+  background-color: #2c5f8a;
+}
+
+.link-container.dark:hover {
+  background-color: #333333;
+}
+
+.btn-link.dark {
+  color: #121212;
+  background-color: #589eee;
+}
+
+.reminder-container.dark {
+  background-color: #1e1e1e;
+  border-color: #333333;
+}
+
+.reminder-container.dark h3 {
+  color: #ff9800;
+}
+
+.reminder-input-group.dark label {
+  color: #bbbbbb;
+}
+
+#reminder-time.dark {
+  background-color: #333333;
+  border-color: #555555;
+  color: #e0e0e0;
+}
+
+#set-reminder-btn.dark {
+  background-color: #589eee;
+  color: #121212;
+}
+
+#set-reminder-btn.dark:hover {
+  background-color: #357ab8;
+}
+
+#reminder-status.dark {
+  color: #bbbbbb;
+}
+
+footer.dark p {
+  color: #888888;
+}
+
+.greet.dark {
+  color: #589eee;
 }
 
 /* Header Styling */
@@ -218,4 +302,171 @@ footer p {
   color: #28a745;
   font-weight: bold;
   font-size: 14px;
+}
+/* ...existing code... */
+
+.hidden {
+  display: none;
+}
+
+#focus-mode-ui {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#focus-mode-ui h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.timer-container {
+  margin-bottom: 20px;
+}
+
+#timer-input {
+  width: 60px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#timer {
+  font-size: 48px;
+  margin: 20px 0;
+  color: #333;
+}
+
+.timer-buttons {
+  margin-bottom: 20px;
+}
+
+.timer-buttons button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+.timer-buttons button:hover {
+  background-color: #218838;
+}
+
+.music-links {
+  margin-top: 20px;
+}
+
+.music-links h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.music-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.music-links li {
+  margin: 10px 0;
+}
+
+.music-links button {
+  background: none;
+  border: none;
+  color: #0056b3;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.music-links button:hover {
+  text-decoration: none;
+}
+
+/* Toggle Switch Styles */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #28a745;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+.focus-mode-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.focus-mode-button {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background-color: #219ebc;
+  color: white;
+  border: none;
+  border-radius: 20%;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.focus-mode-button:hover {
+  background-color: #218838;
+  transform: scale(1.02);
+}
+
+.focus-mode-button:active {
+  background-color: #1e7e34;
 }

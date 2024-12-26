@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Mode</title>
+    <link rel="stylesheet" href="focus.css" />
+  </head>
+  <body>
+    <div class="focus-container">
+      <!-- Timer Section -->
+      <div class="tile timer-settings">
+        <h2>Focus Mode</h2>
+        <div class="timer-container">
+          <label for="timer-input">Set Timer (minutes):</label>
+          <input type="number" id="timer-input" value="25" min="1" />
+        </div>
+        <div id="timer">25:00</div>
+        <div class="timer-buttons">
+          <button id="start-timer-btn">Start Timer</button>
+          <button id="stop-timer-btn">Stop Timer</button>
+          <button id="reset-timer-btn">Reset Timer</button>
+        </div>
+      </div>
+
+      <!-- Music Section -->
+      <div class="tile">
+        <h3>Soothing and Focus Music</h3>
+        <div class="music-options">
+          <div class="music-tile" data-src="../../music/atmosphere.mp3">
+            Atmosphere
+          </div>
+          <div class="music-tile" data-src="../../music/calm-ambient.mp3">
+            Calm-Ambient
+          </div>
+          <div class="music-tile" data-src="../../music/calmAtmosphere.mp3">
+            Calm-Atmosphere
+          </div>
+          <div class="music-tile" data-src="../../music/campWalk.mp3">
+            Camp Walk
+          </div>
+          <div class="music-tile" data-src="../../music/guitar.mp3">Guitar</div>
+        </div>
+        <div class = "audio">
+          <audio id="audio-player" controls></audio>
+        </div>
+      </div>
+    </div>
+    <script src="focus.js"></script>
+  </body>
+</html>

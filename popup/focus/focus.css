@@ -1,0 +1,164 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.focus-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tile {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+h2,
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #023047;
+}
+
+.timer-container {
+  margin: 20px 0;
+}
+
+label {
+  font-size: 1rem;
+}
+
+#timer {
+  font-size: 2.5rem;
+  color: #219ebc;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.timer-buttons {
+  margin-bottom: 20px;
+}
+
+.timer-buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #219ebc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.timer-buttons button:hover {
+  background-color: #126782;
+  transform: scale(1.05);
+}
+
+.music-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.music-tile {
+  background-color: #8ecae6;
+  color: #023047;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  font-size: large;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  flex: 0 1 calc(30% - 10px);
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.music-tile.playing {
+  background-color: #219ebc;
+  color: #fff;
+}
+
+#timer-input {
+  width: 80px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.music-tile.paused {
+  background-color: #ffb703;
+  color: #fff;
+}
+
+.music-tile:hover {
+  background-color: #219ebc;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.audio {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.audio audio {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 1.5rem;
+  }
+  #timer {
+    font-size: 2rem;
+  }
+  .music-tile {
+    flex: 0 1 calc(45% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .music-tile {
+    flex: 0 1 calc(100% - 10px);
+  }
+}
